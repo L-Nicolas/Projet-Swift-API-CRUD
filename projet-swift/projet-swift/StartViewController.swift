@@ -19,6 +19,7 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: true);
         self.startLabel.text = "J'AI PAS DIDÉE ENFAITE"
         self.startLabel.font = UIFont.boldSystemFont(ofSize: 30)
         self.startLabel.textAlignment = NSTextAlignment.center;

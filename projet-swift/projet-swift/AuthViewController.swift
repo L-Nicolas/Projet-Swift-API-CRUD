@@ -21,6 +21,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: true);
         self.loginTextField.delegate = self
         self.passwordTextField.delegate = self
         self.presentationLabel.text = "ACCÉDEZ À VOTRE COMPTE"

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="projet_swift_1" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="projet_swift" customModuleProvider="target">
             <connections>
                 <outlet property="accountTabBar" destination="nBZ-nF-fAG" id="A9C-Qw-BCB"/>
                 <outlet property="homePresentationLabel" destination="4i0-l1-hxz" id="TDA-wj-7YP"/>

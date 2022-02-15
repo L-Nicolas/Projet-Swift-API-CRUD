@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.setHidesBackButton(true, animated: true);
         self.homePresentationLabel.text = "BIENVENUE DANS VOTRE ESPACE LOCATAIRE"
         self.homePresentationLabel.font = UIFont.boldSystemFont(ofSize: 30)
         self.homePresentationLabel.textAlignment = NSTextAlignment.left;
