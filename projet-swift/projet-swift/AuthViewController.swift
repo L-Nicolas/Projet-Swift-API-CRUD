@@ -46,7 +46,10 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
                   return
               }
         let auth = Auth()
-        let result = auth.loginUser(email: log, password: pwd)
+        Task {
+            let result = await auth.loginUser(email: log, password: pwd)
+            dump(result)
+        }
         
         /*let alert = UIAlertController(title: "Problème", message: result["message"], preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))

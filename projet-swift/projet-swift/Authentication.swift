@@ -10,11 +10,13 @@ import Foundation
 final class Auth{
     var hasError = false
     
-    func loginUser(email: String, password: String) -> [String: String]  {
+    func loginUser(email: String, password: String) async -> [String: AnyObject] {
+        
+        var dic:[String:AnyObject] = [:]
 
         guard !email.isEmpty && !password.isEmpty else {
             print("Invalid text field")
-            let dic:[String:String] = ["message" : "Champs vide"]
+            dic["message"] = "Champs vide" as AnyObject
             return dic
         }
 
@@ -24,42 +26,29 @@ final class Auth{
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpBody = parameters.data(using: String.Encoding.utf8)
-
-        let session = URLSession.shared
-        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            print(response!)
+        
+        //Ancienne version non asynchrone
+        /*
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
             do {
                 let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
-                dump(json)
+                dic = json
             } catch {
                 print("error")
             }
         })
-        task.resume()
-        let dic:[String:String] = ["message" : "Login ou Mot de passe invalid"]
-        return dic
-
-        /*URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
-            DispatchQueue.main.async {
-                if error != nil || (response as! HTTPURLResponse).statusCode != 200 {
-                    self?.hasError = true
-                } else if let data = data {
-                    do {
-                        let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                        dump(json)
-                        if(json["data"] != nil){
-                            let user = try JSONDecoder().decode(User.self, from: json["data"] as! Data)
-                            print(user.prenom)
-                        }
-                        print("No data found")
-                        
-                    } catch {
-                        print("Unable to Decode Response : \(error)")
-                    }
-                }
-            }
-        }.resume()*/
+        task.resume()*/
         
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+            let json = try JSONSerialization.jsonObject(with: data) as! Dictionary<String, AnyObject>
+            dic["data"] = json as AnyObject
+            return dic
+        }
+        catch {
+            return dic
+        }
     }
 }
 
