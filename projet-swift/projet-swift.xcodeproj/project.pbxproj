@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095A917027CA8ECD0044FFA9 /* newRapportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095A916E27CA8ECD0044FFA9 /* newRapportViewController.swift */; };
+		095A917127CA8ECD0044FFA9 /* newRapportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095A916F27CA8ECD0044FFA9 /* newRapportViewController.xib */; };
+		095A917327CA99C30044FFA9 /* createRapport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095A917227CA99C30044FFA9 /* createRapport.swift */; };
 		370E451A27B93A95001F9538 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E451827B93A95001F9538 /* HomeViewController.swift */; };
 		370E451B27B93A95001F9538 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E451927B93A95001F9538 /* HomeViewController.xib */; };
 		370E451E27B9573C001F9538 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E451C27B9573C001F9538 /* StartViewController.swift */; };
 		370E451F27B9573C001F9538 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E451D27B9573C001F9538 /* StartViewController.xib */; };
-		370E452227B95C0E001F9538 /* UserRapportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E452027B95C0E001F9538 /* UserRapportViewController.swift */; };
-		370E452327B95C0E001F9538 /* UserRapportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E452127B95C0E001F9538 /* UserRapportViewController.xib */; };
 		3736426A27A5DDBD00FF78AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736426927A5DDBD00FF78AC /* AppDelegate.swift */; };
 		3736427327A5DDBF00FF78AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3736427227A5DDBF00FF78AC /* Assets.xcassets */; };
 		3736427627A5DDBF00FF78AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3736427427A5DDBF00FF78AC /* LaunchScreen.storyboard */; };
@@ -23,12 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		095A916E27CA8ECD0044FFA9 /* newRapportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newRapportViewController.swift; sourceTree = "<group>"; };
+		095A916F27CA8ECD0044FFA9 /* newRapportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newRapportViewController.xib; sourceTree = "<group>"; };
+		095A917227CA99C30044FFA9 /* createRapport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createRapport.swift; sourceTree = "<group>"; };
 		370E451827B93A95001F9538 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		370E451927B93A95001F9538 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		370E451C27B9573C001F9538 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		370E451D27B9573C001F9538 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
-		370E452027B95C0E001F9538 /* UserRapportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRapportViewController.swift; sourceTree = "<group>"; };
-		370E452127B95C0E001F9538 /* UserRapportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserRapportViewController.xib; sourceTree = "<group>"; };
 		3736426627A5DDBD00FF78AC /* projet-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "projet-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3736426927A5DDBD00FF78AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3736427227A5DDBF00FF78AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,10 +82,11 @@
 				3736427E27A5DF8400FF78AC /* AuthViewController.xib */,
 				370E451827B93A95001F9538 /* HomeViewController.swift */,
 				370E451927B93A95001F9538 /* HomeViewController.xib */,
-				370E452027B95C0E001F9538 /* UserRapportViewController.swift */,
-				370E452127B95C0E001F9538 /* UserRapportViewController.xib */,
 				3736428327A5E3D300FF78AC /* Authentication.swift */,
 				3736428127A5E15700FF78AC /* User.swift */,
+				095A916E27CA8ECD0044FFA9 /* newRapportViewController.swift */,
+				095A916F27CA8ECD0044FFA9 /* newRapportViewController.xib */,
+				095A917227CA99C30044FFA9 /* createRapport.swift */,
 			);
 			path = "projet-swift";
 			sourceTree = "<group>";
@@ -148,9 +151,9 @@
 			files = (
 				3736427627A5DDBF00FF78AC /* LaunchScreen.storyboard in Resources */,
 				3736428027A5DF8400FF78AC /* AuthViewController.xib in Resources */,
+				095A917127CA8ECD0044FFA9 /* newRapportViewController.xib in Resources */,
 				3736427327A5DDBF00FF78AC /* Assets.xcassets in Resources */,
 				370E451B27B93A95001F9538 /* HomeViewController.xib in Resources */,
-				370E452327B95C0E001F9538 /* UserRapportViewController.xib in Resources */,
 				370E451F27B9573C001F9538 /* StartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,9 +167,10 @@
 			files = (
 				3736428227A5E15700FF78AC /* User.swift in Sources */,
 				3736427F27A5DF8400FF78AC /* AuthViewController.swift in Sources */,
+				095A917327CA99C30044FFA9 /* createRapport.swift in Sources */,
+				095A917027CA8ECD0044FFA9 /* newRapportViewController.swift in Sources */,
 				3736428427A5E3D300FF78AC /* Authentication.swift in Sources */,
 				3736426A27A5DDBD00FF78AC /* AppDelegate.swift in Sources */,
-				370E452227B95C0E001F9538 /* UserRapportViewController.swift in Sources */,
 				370E451A27B93A95001F9538 /* HomeViewController.swift in Sources */,
 				370E451E27B9573C001F9538 /* StartViewController.swift in Sources */,
 			);
