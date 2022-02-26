@@ -10,17 +10,17 @@ import Foundation
 final class Auth{
     var hasError = false
     
-    func loginUser(email: String, password: String) async -> [String: AnyObject] {
+    func loginUser(email: String, password: String) async -> [String: String] {
         
-        var dic:[String:AnyObject] = [:]
+        var dic:[String:String] = [:]
 
         guard !email.isEmpty && !password.isEmpty else {
             print("Invalid text field")
-            dic["message"] = "Champs vide" as AnyObject
+            dic["message"] = "Champs vide" as String
             return dic
         }
 
-        var request = URLRequest(url: URL(string: "http://localhost:8888/endpoints/auth/login.php")!)
+        var request = URLRequest(url: URL(string: "http://localhost:8888/backend-PHP/endpoints/auth/login.php")!)
         let parameters = "email=" + email + "&password=" + password
 
         request.httpMethod = "POST"
@@ -42,8 +42,10 @@ final class Auth{
         
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
-            let json = try JSONSerialization.jsonObject(with: data) as! Dictionary<String, AnyObject>
-            dic["data"] = json as AnyObject
+            let json = try JSONSerialization.jsonObject(with: data) as! Dictionary<String, Any>
+            if let token = json["token"] as? String{
+                dic = ["token" : token]
+            }
             return dic
         }
         catch {

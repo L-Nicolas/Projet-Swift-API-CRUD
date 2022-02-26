@@ -48,16 +48,18 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
         let auth = Auth()
         Task {
             let result = await auth.loginUser(email: log, password: pwd)
-            dump(result)
+            if(result == [:]){
+                self.presentationLabel.text = "Vérifier vos identifiants"
+            }else {
+                let nextController = HomeViewController.newInstance()
+                self.navigationController?.pushViewController(nextController, animated: true)
+            }
+
         }
         
         /*let alert = UIAlertController(title: "Problème", message: result["message"], preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)*/
-        
-        
-        let nextController = HomeViewController.newInstance()
-        self.navigationController?.pushViewController(nextController, animated: true)
     }
     
     
