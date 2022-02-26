@@ -29,7 +29,7 @@ class StartViewController: UIViewController {
     
     
     @IBAction func startButton(_ sender: UIButton) {
-        let nextController = AuthViewController.newInstance()
+        let nextController = AuthViewController.newInstance(myToken: [:])
         self.navigationController?.pushViewController(nextController, animated: true)
     }
 

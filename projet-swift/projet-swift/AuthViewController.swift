@@ -13,9 +13,11 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var subscribeButton: UIButton!
+    var myToken: [String:String]!
     
-    public class func newInstance() -> AuthViewController {
+    public class func newInstance(myToken: [String:String]) -> AuthViewController {
         let avc = AuthViewController()
+        avc.myToken = myToken
         return avc
     }
     
@@ -45,13 +47,14 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
               let pwd = self.passwordTextField.text else {
                   return
               }
-        let auth = Auth()
+        
         Task {
+            let auth = Auth()
             let result = await auth.loginUser(email: log, password: pwd)
             if(result == [:]){
                 self.presentationLabel.text = "Vérifier vos identifiants"
             }else {
-                let nextController = HomeViewController.newInstance()
+                let nextController = HomeViewController.newInstance(myToken: result)
                 self.navigationController?.pushViewController(nextController, animated: true)
             }
 
