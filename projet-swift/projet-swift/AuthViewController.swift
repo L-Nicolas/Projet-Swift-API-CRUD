@@ -13,11 +13,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var subscribeButton: UIButton!
-    var myToken: [String:String]!
     
-    public class func newInstance(myToken: [String:String]) -> AuthViewController {
+    public class func newInstance() -> AuthViewController {
         let avc = AuthViewController()
-        avc.myToken = myToken
         return avc
     }
     
