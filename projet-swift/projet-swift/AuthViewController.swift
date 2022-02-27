@@ -45,19 +45,34 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
               let pwd = self.passwordTextField.text else {
                   return
               }
-        let auth = Auth()
-        Task {
-            let result = await auth.loginUser(email: log, password: pwd)
-            dump(result)
+        
+        if log.isEmpty || pwd.isEmpty {
+            let alert = UIAlertController(title: "Problème", message: "Veuillez remplir les champs", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        } else {
+            let auth = Auth()
+            Task {
+                let result = await Auth().loginUser(email: log, password: pwd)
+                dump(result["data"])
+                
+                if result["data"]?["error"] as! Int == 1 {
+                    let alert = UIAlertController(title: "Problème", message: result["data"]?["message"] as? String, preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                } else {
+                    let nextController = HomeViewController.newInstance()
+                    self.navigationController?.pushViewController(nextController, animated: true)
+                }
+            }
         }
+        
         
         /*let alert = UIAlertController(title: "Problème", message: result["message"], preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)*/
         
-        
-        let nextController = HomeViewController.newInstance()
-        self.navigationController?.pushViewController(nextController, animated: true)
     }
     
     

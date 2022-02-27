@@ -12,32 +12,23 @@ final class Auth{
     
     func loginUser(email: String, password: String) async -> [String: AnyObject] {
         
+        dump(email)
         var dic:[String:AnyObject] = [:]
 
-        guard !email.isEmpty && !password.isEmpty else {
+        /*guard !email.isEmpty && !password.isEmpty else {
             print("Invalid text field")
             dic["message"] = "Champs vide" as AnyObject
             return dic
-        }
+        }*/
 
-        var request = URLRequest(url: URL(string: "http://localhost:8888/endpoints/auth/login.php")!)
-        let parameters = "email=" + email + "&password=" + password
+        var request = URLRequest(url: URL(string: "http://localhost:3000/api/user/connect")!)
+        var parameters = "email=" + email + "&password=" + password
+        
+        dump(parameters)
 
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpBody = parameters.data(using: String.Encoding.utf8)
-        
-        //Ancienne version non asynchrone
-        /*
-        let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
-                dic = json
-            } catch {
-                print("error")
-            }
-        })
-        task.resume()*/
         
         
         do {

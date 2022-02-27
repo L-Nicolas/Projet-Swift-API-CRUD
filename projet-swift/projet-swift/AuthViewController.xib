@@ -5,13 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="projet_swift" customModuleProvider="target">
             <connections>
-                <outlet property="loginTextField" destination="f1s-Oh-2Qk" id="ibp-D3-nFb"/>
+                <outlet property="loginTextField" destination="U5s-Tp-MIS" id="ldT-UY-1ch"/>
                 <outlet property="passwordTextField" destination="f1s-Oh-2Qk" id="kg9-Wd-i9x"/>
                 <outlet property="presentationLabel" destination="lAU-F6-rvh" id="XPt-Y0-rQx"/>
                 <outlet property="subscribeButton" destination="aKO-HQ-YDv" id="bVb-xf-qcC"/>
@@ -26,22 +25,23 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKO-HQ-YDv">
                     <rect key="frame" x="57" y="694" width="301" height="56"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.17254901960784313" green="0.4823529411764706" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Se connecter" cornerStyle="large">
-                        <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                        <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="touchSubscribe:" destination="-1" eventType="touchUpInside" id="Iep-yS-qmP"/>
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1s-Oh-2Qk">
-                    <rect key="frame" x="98" y="583" width="260" height="34"/>
+                    <rect key="frame" x="57" y="585" width="301" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U5s-Tp-MIS">
-                    <rect key="frame" x="98" y="480" width="260" height="34"/>
+                    <rect key="frame" x="57" y="480" width="301" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -63,7 +63,7 @@
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.92941176469999998" green="0.94901960780000005" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
         </view>
     </objects>
@@ -71,8 +71,5 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

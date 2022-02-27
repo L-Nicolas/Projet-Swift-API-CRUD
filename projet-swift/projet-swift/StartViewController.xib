@@ -4,11 +4,10 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController" customModule="projet_swift_1" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController" customModule="projet_swift" customModuleProvider="target">
             <connections>
                 <outlet property="startButton" destination="usb-SP-OTv" id="e8J-Hy-xdb"/>
                 <outlet property="startLabel" destination="7dP-4u-88D" id="HoO-8V-pRL"/>
@@ -20,11 +19,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usb-SP-OTv">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usb-SP-OTv">
                     <rect key="frame" x="69" y="521" width="277" height="87"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.17254901959999999" green="0.4823529412" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="COMMENCER" cornerStyle="large"/>
+                    <buttonConfiguration key="configuration" style="filled" title="COMMENCER" cornerStyle="large">
+                        <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="startButton:" destination="-1" eventType="touchUpInside" id="CfC-Cd-KjM"/>
                     </connections>
@@ -38,13 +40,8 @@
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.92941176470588238" green="0.94901960784313721" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="137.68115942028987" y="68.973214285714278"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
