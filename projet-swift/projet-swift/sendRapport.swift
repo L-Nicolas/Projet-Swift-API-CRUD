@@ -14,16 +14,12 @@ final class sendReport{
     
         var dic:[String:AnyObject] = [:]
 
-
-
         var request = URLRequest(url: URL(string: "http://localhost:3000/api/user/rapport/create/")!)
         var parameters = "token=" + token + "&type_probleme=" + myProblem + "&description=" + iDescription
     
-        
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpBody = parameters.data(using: String.Encoding.utf8)
-    
     
         do {
             let (data, response) = try await URLSession.shared.data(for: request)

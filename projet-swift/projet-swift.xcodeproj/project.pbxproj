@@ -23,7 +23,6 @@
 		3736428027A5DF8400FF78AC /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3736427E27A5DF8400FF78AC /* AuthViewController.xib */; };
 		3736428227A5E15700FF78AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736428127A5E15700FF78AC /* User.swift */; };
 		3736428427A5E3D300FF78AC /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736428327A5E3D300FF78AC /* Authentication.swift */; };
-		37D95C3027CBEA680007FF9E /* MenuController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D95C2F27CBEA680007FF9E /* MenuController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		3736427E27A5DF8400FF78AC /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		3736428127A5E15700FF78AC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3736428327A5E3D300FF78AC /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
-		37D95C2F27CBEA680007FF9E /* MenuController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +88,6 @@
 				370E451927B93A95001F9538 /* HomeViewController.xib */,
 				3736428327A5E3D300FF78AC /* Authentication.swift */,
 				3736428127A5E15700FF78AC /* User.swift */,
-				37D95C2F27CBEA680007FF9E /* MenuController.storyboard */,
 				0945518427CBF2740062B49B /* CreateRapportViewController.swift */,
 				0945518527CBF2740062B49B /* CreateRapportViewController.xib */,
 				0945518827CBF94C0062B49B /* newRapportTableViewCell.swift */,
@@ -161,7 +158,6 @@
 				3736427627A5DDBF00FF78AC /* LaunchScreen.storyboard in Resources */,
 				0945518B27CBF94C0062B49B /* newRapportTableViewCell.xib in Resources */,
 				3736428027A5DF8400FF78AC /* AuthViewController.xib in Resources */,
-				37D95C3027CBEA680007FF9E /* MenuController.storyboard in Resources */,
 				3736427327A5DDBF00FF78AC /* Assets.xcassets in Resources */,
 				370E451B27B93A95001F9538 /* HomeViewController.xib in Resources */,
 				370E451F27B9573C001F9538 /* StartViewController.xib in Resources */,
