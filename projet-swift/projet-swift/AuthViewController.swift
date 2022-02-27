@@ -49,6 +49,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
         Task {
             let auth = Auth()
             let result = await auth.loginUser(email: log, password: pwd)
+            
             if(result == [:]){
                 self.presentationLabel.text = "Vérifier vos identifiants"
             }else {

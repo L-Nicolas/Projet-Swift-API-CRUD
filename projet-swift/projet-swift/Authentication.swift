@@ -20,7 +20,7 @@ final class Auth{
             return dic
         }
 
-        var request = URLRequest(url: URL(string: "http://localhost:8888/backend-PHP/endpoints/auth/login.php")!)
+        var request = URLRequest(url: URL(string: "http://localhost:3000/api/user/Connect")!)
         let parameters = "email=" + email + "&password=" + password
 
         request.httpMethod = "POST"
@@ -43,8 +43,8 @@ final class Auth{
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
             let json = try JSONSerialization.jsonObject(with: data) as! Dictionary<String, Any>
-            if let token = json["token"] as? String{
-                dic = ["token" : token]
+            if let token = json["data"]["token"] as? String{
+               dic = ["token" : token]
             }
             return dic
         }
