@@ -16,9 +16,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeTabBar: UITabBarItem!
     @IBOutlet weak var rapportTabBar: UITabBarItem!
     @IBOutlet weak var accountTabBar: UITabBarItem!
-    var result: [String:AnyObject] = [:]
+    var result: String = ""
     
-    public class func newInstance(result: [String:AnyObject]) -> HomeViewController {
+    public class func newInstance(result: String) -> HomeViewController {
         let hvc = HomeViewController()
         hvc.result = result
         return hvc

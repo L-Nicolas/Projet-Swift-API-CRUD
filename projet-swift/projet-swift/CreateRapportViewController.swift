@@ -11,12 +11,12 @@ class CreateRapportViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var myTable: UITableView!
     @IBOutlet weak var myDescription: UITextField!
-    var result: [String:AnyObject] = [:]
+    var result: String = ""
     var select: String = ""
     
     let arr = ["serrurerie","plomberie","électricité","autre"]
     
-    public class func newInstance(result: [String:AnyObject]) -> CreateRapportViewController {
+    public class func newInstance(result: String) -> CreateRapportViewController {
         let hvc = CreateRapportViewController()
         hvc.result = result
         return hvc
@@ -58,12 +58,8 @@ class CreateRapportViewController: UIViewController, UITableViewDelegate, UITabl
             self.present(alert, animated: true, completion: nil)
             return
         } else {
-            guard let token = result["data"]?["data"] as? [[String:Any]] else {
-                return
-            }
-            let finalToken = token.first
             Task {
-                let resReport = await sendReport().sendnewReport(myProblem: self.select, iDescription: iDescription, token: finalToken!["token"] as! String)
+                let resReport = await sendReport().sendnewReport(myProblem: self.select, iDescription: iDescription, token: result)
                 
                 if resReport["data"]?["error"] as! Int == 1 {
                     let alert = UIAlertController(title: "Problème", message: resReport["data"]?["message"] as? String, preferredStyle: UIAlertController.Style.alert)
