@@ -8,16 +8,24 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+        
     @IBOutlet weak var homePresentationLabel: UILabel!
-    @IBOutlet var navBar: [UITabBar]!
+    /*@IBOutlet var navBar: [UITabBar]!
     
     @IBOutlet weak var homeTabBar: UITabBarItem!
     @IBOutlet weak var rapportTabBar: UITabBarItem!
-    @IBOutlet weak var accountTabBar: UITabBarItem!
+    @IBOutlet weak var accountTabBar: UITabBarItem!*/
     
-    public class func newInstance() -> HomeViewController {
+    static let albumCellID = "_ALBUM_CELL_ID"
+    var result: [String:AnyObject] = [:]
+    
+    public class func newInstance(token: [String: AnyObject]) -> HomeViewController {
         let hvc = HomeViewController()
+        hvc.result = token
+        print("token sav dans home avant")
+        print(hvc.result)
+        print("token sav dans home avant")
+        print("")
         return hvc
     }
 
@@ -36,5 +44,10 @@ class HomeViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = nil
     }
 
-
+    @IBAction func listRapportUser(_ sender: Any) {
+        print("token sav dans home")
+        print(hvc.result)
+        let nextController = ListRapportUserViewController.newInstance(token: hvc.result)
+        self.navigationController?.pushViewController(nextController, animated: true)
+    }
 }

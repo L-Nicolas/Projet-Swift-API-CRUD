@@ -11,8 +11,6 @@
 		370E451B27B93A95001F9538 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E451927B93A95001F9538 /* HomeViewController.xib */; };
 		370E451E27B9573C001F9538 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E451C27B9573C001F9538 /* StartViewController.swift */; };
 		370E451F27B9573C001F9538 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E451D27B9573C001F9538 /* StartViewController.xib */; };
-		370E452227B95C0E001F9538 /* UserRapportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E452027B95C0E001F9538 /* UserRapportViewController.swift */; };
-		370E452327B95C0E001F9538 /* UserRapportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E452127B95C0E001F9538 /* UserRapportViewController.xib */; };
 		3736426A27A5DDBD00FF78AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736426927A5DDBD00FF78AC /* AppDelegate.swift */; };
 		3736427327A5DDBF00FF78AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3736427227A5DDBF00FF78AC /* Assets.xcassets */; };
 		3736427627A5DDBF00FF78AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3736427427A5DDBF00FF78AC /* LaunchScreen.storyboard */; };
@@ -20,7 +18,13 @@
 		3736428027A5DF8400FF78AC /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3736427E27A5DF8400FF78AC /* AuthViewController.xib */; };
 		3736428227A5E15700FF78AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736428127A5E15700FF78AC /* User.swift */; };
 		3736428427A5E3D300FF78AC /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736428327A5E3D300FF78AC /* Authentication.swift */; };
-		37D95C3027CBEA680007FF9E /* MenuController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D95C2F27CBEA680007FF9E /* MenuController.storyboard */; };
+		37D95C3227CBEFEE0007FF9E /* RapportFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C3127CBEFEE0007FF9E /* RapportFactory.swift */; };
+		37D95C3427CBEFFD0007FF9E /* ListRapportFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C3327CBEFFD0007FF9E /* ListRapportFactory.swift */; };
+		37D95C3627CBF0A70007FF9E /* Rapport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C3527CBF0A70007FF9E /* Rapport.swift */; };
+		37D95C3827CBF1BA0007FF9E /* ListRapport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C3727CBF1BA0007FF9E /* ListRapport.swift */; };
+		37D95C3A27CBF3080007FF9E /* ListRapportWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C3927CBF3080007FF9E /* ListRapportWebService.swift */; };
+		37D95C3D27CC052A0007FF9E /* ListRapportUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C3B27CC052A0007FF9E /* ListRapportUserViewController.swift */; };
+		37D95C3E27CC052A0007FF9E /* ListRapportUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D95C3C27CC052A0007FF9E /* ListRapportUserViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +32,6 @@
 		370E451927B93A95001F9538 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		370E451C27B9573C001F9538 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		370E451D27B9573C001F9538 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
-		370E452027B95C0E001F9538 /* UserRapportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRapportViewController.swift; sourceTree = "<group>"; };
-		370E452127B95C0E001F9538 /* UserRapportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserRapportViewController.xib; sourceTree = "<group>"; };
 		3736426627A5DDBD00FF78AC /* projet-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "projet-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3736426927A5DDBD00FF78AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3736427227A5DDBF00FF78AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,7 +41,13 @@
 		3736427E27A5DF8400FF78AC /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		3736428127A5E15700FF78AC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3736428327A5E3D300FF78AC /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
-		37D95C2F27CBEA680007FF9E /* MenuController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuController.storyboard; sourceTree = "<group>"; };
+		37D95C3127CBEFEE0007FF9E /* RapportFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapportFactory.swift; sourceTree = "<group>"; };
+		37D95C3327CBEFFD0007FF9E /* ListRapportFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRapportFactory.swift; sourceTree = "<group>"; };
+		37D95C3527CBF0A70007FF9E /* Rapport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rapport.swift; sourceTree = "<group>"; };
+		37D95C3727CBF1BA0007FF9E /* ListRapport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRapport.swift; sourceTree = "<group>"; };
+		37D95C3927CBF3080007FF9E /* ListRapportWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRapportWebService.swift; sourceTree = "<group>"; };
+		37D95C3B27CC052A0007FF9E /* ListRapportUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRapportUserViewController.swift; sourceTree = "<group>"; };
+		37D95C3C27CC052A0007FF9E /* ListRapportUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListRapportUserViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +90,15 @@
 				3736427E27A5DF8400FF78AC /* AuthViewController.xib */,
 				370E451827B93A95001F9538 /* HomeViewController.swift */,
 				370E451927B93A95001F9538 /* HomeViewController.xib */,
-				370E452027B95C0E001F9538 /* UserRapportViewController.swift */,
-				370E452127B95C0E001F9538 /* UserRapportViewController.xib */,
+				37D95C3B27CC052A0007FF9E /* ListRapportUserViewController.swift */,
+				37D95C3C27CC052A0007FF9E /* ListRapportUserViewController.xib */,
 				3736428327A5E3D300FF78AC /* Authentication.swift */,
 				3736428127A5E15700FF78AC /* User.swift */,
-				37D95C2F27CBEA680007FF9E /* MenuController.storyboard */,
+				37D95C3527CBF0A70007FF9E /* Rapport.swift */,
+				37D95C3727CBF1BA0007FF9E /* ListRapport.swift */,
+				37D95C3127CBEFEE0007FF9E /* RapportFactory.swift */,
+				37D95C3327CBEFFD0007FF9E /* ListRapportFactory.swift */,
+				37D95C3927CBF3080007FF9E /* ListRapportWebService.swift */,
 			);
 			path = "projet-swift";
 			sourceTree = "<group>";
@@ -151,10 +163,9 @@
 			files = (
 				3736427627A5DDBF00FF78AC /* LaunchScreen.storyboard in Resources */,
 				3736428027A5DF8400FF78AC /* AuthViewController.xib in Resources */,
-				37D95C3027CBEA680007FF9E /* MenuController.storyboard in Resources */,
+				37D95C3E27CC052A0007FF9E /* ListRapportUserViewController.xib in Resources */,
 				3736427327A5DDBF00FF78AC /* Assets.xcassets in Resources */,
 				370E451B27B93A95001F9538 /* HomeViewController.xib in Resources */,
-				370E452327B95C0E001F9538 /* UserRapportViewController.xib in Resources */,
 				370E451F27B9573C001F9538 /* StartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,13 +177,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D95C3627CBF0A70007FF9E /* Rapport.swift in Sources */,
 				3736428227A5E15700FF78AC /* User.swift in Sources */,
 				3736427F27A5DF8400FF78AC /* AuthViewController.swift in Sources */,
 				3736428427A5E3D300FF78AC /* Authentication.swift in Sources */,
 				3736426A27A5DDBD00FF78AC /* AppDelegate.swift in Sources */,
-				370E452227B95C0E001F9538 /* UserRapportViewController.swift in Sources */,
+				37D95C3427CBEFFD0007FF9E /* ListRapportFactory.swift in Sources */,
 				370E451A27B93A95001F9538 /* HomeViewController.swift in Sources */,
 				370E451E27B9573C001F9538 /* StartViewController.swift in Sources */,
+				37D95C3D27CC052A0007FF9E /* ListRapportUserViewController.swift in Sources */,
+				37D95C3827CBF1BA0007FF9E /* ListRapport.swift in Sources */,
+				37D95C3A27CBF3080007FF9E /* ListRapportWebService.swift in Sources */,
+				37D95C3227CBEFEE0007FF9E /* RapportFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
