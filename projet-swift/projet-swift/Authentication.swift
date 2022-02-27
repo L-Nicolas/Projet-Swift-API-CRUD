@@ -12,7 +12,7 @@ final class Auth{
     
     func loginUser(email: String, password: String) async -> [String: AnyObject] {
         
-        dump(email)
+        
         var dic:[String:AnyObject] = [:]
 
         /*guard !email.isEmpty && !password.isEmpty else {
@@ -24,7 +24,7 @@ final class Auth{
         var request = URLRequest(url: URL(string: "http://localhost:3000/api/user/connect")!)
         var parameters = "email=" + email + "&password=" + password
         
-        dump(parameters)
+       
 
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
