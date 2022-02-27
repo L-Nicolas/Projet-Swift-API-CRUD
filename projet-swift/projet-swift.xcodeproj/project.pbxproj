@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0945518627CBF2740062B49B /* CreateRapportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945518427CBF2740062B49B /* CreateRapportViewController.swift */; };
+		0945518727CBF2740062B49B /* CreateRapportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0945518527CBF2740062B49B /* CreateRapportViewController.xib */; };
+		0945518A27CBF94C0062B49B /* newRapportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945518827CBF94C0062B49B /* newRapportTableViewCell.swift */; };
+		0945518B27CBF94C0062B49B /* newRapportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0945518927CBF94C0062B49B /* newRapportTableViewCell.xib */; };
+		0945518D27CC0AE00062B49B /* sendRapport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945518C27CC0AE00062B49B /* sendRapport.swift */; };
 		370E451A27B93A95001F9538 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E451827B93A95001F9538 /* HomeViewController.swift */; };
 		370E451B27B93A95001F9538 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E451927B93A95001F9538 /* HomeViewController.xib */; };
 		370E451E27B9573C001F9538 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E451C27B9573C001F9538 /* StartViewController.swift */; };
 		370E451F27B9573C001F9538 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E451D27B9573C001F9538 /* StartViewController.xib */; };
-		370E452227B95C0E001F9538 /* UserRapportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E452027B95C0E001F9538 /* UserRapportViewController.swift */; };
-		370E452327B95C0E001F9538 /* UserRapportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E452127B95C0E001F9538 /* UserRapportViewController.xib */; };
 		3736426A27A5DDBD00FF78AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3736426927A5DDBD00FF78AC /* AppDelegate.swift */; };
 		3736427327A5DDBF00FF78AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3736427227A5DDBF00FF78AC /* Assets.xcassets */; };
 		3736427627A5DDBF00FF78AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3736427427A5DDBF00FF78AC /* LaunchScreen.storyboard */; };
@@ -24,12 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0945518427CBF2740062B49B /* CreateRapportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRapportViewController.swift; sourceTree = "<group>"; };
+		0945518527CBF2740062B49B /* CreateRapportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateRapportViewController.xib; sourceTree = "<group>"; };
+		0945518827CBF94C0062B49B /* newRapportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newRapportTableViewCell.swift; sourceTree = "<group>"; };
+		0945518927CBF94C0062B49B /* newRapportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newRapportTableViewCell.xib; sourceTree = "<group>"; };
+		0945518C27CC0AE00062B49B /* sendRapport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendRapport.swift; sourceTree = "<group>"; };
 		370E451827B93A95001F9538 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		370E451927B93A95001F9538 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		370E451C27B9573C001F9538 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		370E451D27B9573C001F9538 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
-		370E452027B95C0E001F9538 /* UserRapportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRapportViewController.swift; sourceTree = "<group>"; };
-		370E452127B95C0E001F9538 /* UserRapportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserRapportViewController.xib; sourceTree = "<group>"; };
 		3736426627A5DDBD00FF78AC /* projet-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "projet-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3736426927A5DDBD00FF78AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3736427227A5DDBF00FF78AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,11 +88,14 @@
 				3736427E27A5DF8400FF78AC /* AuthViewController.xib */,
 				370E451827B93A95001F9538 /* HomeViewController.swift */,
 				370E451927B93A95001F9538 /* HomeViewController.xib */,
-				370E452027B95C0E001F9538 /* UserRapportViewController.swift */,
-				370E452127B95C0E001F9538 /* UserRapportViewController.xib */,
 				3736428327A5E3D300FF78AC /* Authentication.swift */,
 				3736428127A5E15700FF78AC /* User.swift */,
 				37D95C2F27CBEA680007FF9E /* MenuController.storyboard */,
+				0945518427CBF2740062B49B /* CreateRapportViewController.swift */,
+				0945518527CBF2740062B49B /* CreateRapportViewController.xib */,
+				0945518827CBF94C0062B49B /* newRapportTableViewCell.swift */,
+				0945518927CBF94C0062B49B /* newRapportTableViewCell.xib */,
+				0945518C27CC0AE00062B49B /* sendRapport.swift */,
 			);
 			path = "projet-swift";
 			sourceTree = "<group>";
@@ -150,12 +159,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3736427627A5DDBF00FF78AC /* LaunchScreen.storyboard in Resources */,
+				0945518B27CBF94C0062B49B /* newRapportTableViewCell.xib in Resources */,
 				3736428027A5DF8400FF78AC /* AuthViewController.xib in Resources */,
 				37D95C3027CBEA680007FF9E /* MenuController.storyboard in Resources */,
 				3736427327A5DDBF00FF78AC /* Assets.xcassets in Resources */,
 				370E451B27B93A95001F9538 /* HomeViewController.xib in Resources */,
-				370E452327B95C0E001F9538 /* UserRapportViewController.xib in Resources */,
 				370E451F27B9573C001F9538 /* StartViewController.xib in Resources */,
+				0945518727CBF2740062B49B /* CreateRapportViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,9 +180,11 @@
 				3736427F27A5DF8400FF78AC /* AuthViewController.swift in Sources */,
 				3736428427A5E3D300FF78AC /* Authentication.swift in Sources */,
 				3736426A27A5DDBD00FF78AC /* AppDelegate.swift in Sources */,
-				370E452227B95C0E001F9538 /* UserRapportViewController.swift in Sources */,
 				370E451A27B93A95001F9538 /* HomeViewController.swift in Sources */,
+				0945518A27CBF94C0062B49B /* newRapportTableViewCell.swift in Sources */,
+				0945518D27CC0AE00062B49B /* sendRapport.swift in Sources */,
 				370E451E27B9573C001F9538 /* StartViewController.swift in Sources */,
+				0945518627CBF2740062B49B /* CreateRapportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

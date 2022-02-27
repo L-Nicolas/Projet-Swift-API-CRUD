@@ -12,12 +12,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homePresentationLabel: UILabel!
     @IBOutlet var navBar: [UITabBar]!
     
+    @IBOutlet weak var newRapport: UIButton!
     @IBOutlet weak var homeTabBar: UITabBarItem!
     @IBOutlet weak var rapportTabBar: UITabBarItem!
     @IBOutlet weak var accountTabBar: UITabBarItem!
+    var result: [String:AnyObject] = [:]
     
-    public class func newInstance() -> HomeViewController {
+    public class func newInstance(result: [String:AnyObject]) -> HomeViewController {
         let hvc = HomeViewController()
+        hvc.result = result
         return hvc
     }
 
@@ -37,4 +40,8 @@ class HomeViewController: UIViewController {
     }
 
 
+    @IBAction func newRapport(_ sender: Any) {
+        let nextController = CreateRapportViewController.newInstance(result: result)
+        self.navigationController?.pushViewController(nextController, animated: true)
+    }
 }
