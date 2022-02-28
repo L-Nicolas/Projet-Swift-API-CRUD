@@ -9,16 +9,17 @@ import UIKit
 
 class CreateRapportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var rapportPresentationLabel: UILabel!
     @IBOutlet weak var myTable: UITableView!
     @IBOutlet weak var myDescription: UITextField!
-    var result: String = ""
+    var token: String = ""
     var select: String = ""
     
     let arr = ["serrurerie","plomberie","électricité","autre"]
     
-    public class func newInstance(result: String) -> CreateRapportViewController {
+    public class func newInstance(token: String) -> CreateRapportViewController {
         let hvc = CreateRapportViewController()
-        hvc.result = result
+        hvc.token = token
         return hvc
     }
     
@@ -27,6 +28,10 @@ class CreateRapportViewController: UIViewController, UITableViewDelegate, UITabl
         myTable.register(UITableViewCell.self, forCellReuseIdentifier: "serrurie")
         myTable.delegate = self
         myTable.dataSource = self
+        self.rapportPresentationLabel.text = "CRÉATION D'UN RAPPORT"
+        self.rapportPresentationLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        self.rapportPresentationLabel.textAlignment = NSTextAlignment.left;
+        self.rapportPresentationLabel.numberOfLines = 2
 
         // Do any additional setup after loading the view.
     }
@@ -37,9 +42,7 @@ class CreateRapportViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTable.dequeueReusableCell(withIdentifier: "serrurie", for: indexPath)
-        
         cell.textLabel?.text = self.arr[indexPath.row]
-        
         return cell
     }
     
@@ -59,7 +62,7 @@ class CreateRapportViewController: UIViewController, UITableViewDelegate, UITabl
             return
         } else {
             Task {
-                let resReport = await sendReport().sendnewReport(myProblem: self.select, iDescription: iDescription, token: result)
+                let resReport = await sendReport().sendnewReport(myProblem: self.select, iDescription: iDescription, token: token)
                 
                 if resReport["data"]?["error"] as! Int == 1 {
                     let alert = UIAlertController(title: "Problème", message: resReport["data"]?["message"] as? String, preferredStyle: UIAlertController.Style.alert)

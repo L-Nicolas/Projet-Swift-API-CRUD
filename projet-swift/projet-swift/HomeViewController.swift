@@ -12,15 +12,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homePresentationLabel: UILabel!
     @IBOutlet var navBar: [UITabBar]!
     
-    @IBOutlet weak var newRapport: UIButton!
-    @IBOutlet weak var homeTabBar: UITabBarItem!
-    @IBOutlet weak var rapportTabBar: UITabBarItem!
-    @IBOutlet weak var accountTabBar: UITabBarItem!
-    var result: String = ""
     
-    public class func newInstance(result: String) -> HomeViewController {
+    @IBOutlet weak var btnMesRapports: UIButton!
+    @IBOutlet weak var newRapport: UIButton!
+    var token: String = ""
+    
+    public class func newInstance(token: String) -> HomeViewController {
         let hvc = HomeViewController()
-        hvc.result = result
+        hvc.token = token
         return hvc
     }
 
@@ -38,10 +37,15 @@ class HomeViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         self.navigationItem.leftBarButtonItem = nil
     }
-
-
+    
+    
+    @IBAction func listRapportUser(_ sender: Any) {
+        let nextController = ListRapportUserViewController.newInstance(token: self.token)
+        self.navigationController?.pushViewController(nextController, animated: true)
+    }
+    
     @IBAction func newRapport(_ sender: Any) {
-        let nextController = CreateRapportViewController.newInstance(result: result)
+        let nextController = CreateRapportViewController.newInstance(token: self.token)
         self.navigationController?.pushViewController(nextController, animated: true)
     }
 }

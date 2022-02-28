@@ -56,27 +56,20 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             Task {
                 let result = await Auth().loginUser(email: log, password: pwd)
                 
-                if result["data"]?["error"] as! Int == 1 {
+                if result["error"] as! Int == 1 {
                     let alert = UIAlertController(title: "Problème", message: result["data"]?["message"] as? String, preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 } else {
-                    guard let token = result["data"]?["data"] as? [[String:Any]] else {
+                    guard let token = result["data"] as? [[String:Any]] else {
                         return
                     }
                     let finalToken = token.first
-                    let nextController = HomeViewController.newInstance(result: finalToken!["token"] as! String)
+                    let nextController = HomeViewController.newInstance(token: finalToken!["token"] as! String)
                     self.navigationController?.pushViewController(nextController, animated: true)
                 }
             }
         }
-        
-        
-        /*let alert = UIAlertController(title: "Problème", message: result["message"], preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)*/
-        
     }
-    
     
 }
