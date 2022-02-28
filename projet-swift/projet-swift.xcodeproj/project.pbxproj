@@ -30,6 +30,8 @@
 		37D95C4C27CC2E910007FF9E /* RapportFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C4B27CC2E910007FF9E /* RapportFactory.swift */; };
 		37D95C4E27CC2EB50007FF9E /* ListRapportFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C4D27CC2EB50007FF9E /* ListRapportFactory.swift */; };
 		37D95C5027CC2ED60007FF9E /* ListRapportWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C4F27CC2ED60007FF9E /* ListRapportWebService.swift */; };
+		37D95C5927CC8B9D0007FF9E /* RapportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C5727CC8B9D0007FF9E /* RapportTableViewCell.swift */; };
+		37D95C5A27CC8B9D0007FF9E /* RapportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D95C5827CC8B9D0007FF9E /* RapportTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		37D95C4B27CC2E910007FF9E /* RapportFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapportFactory.swift; sourceTree = "<group>"; };
 		37D95C4D27CC2EB50007FF9E /* ListRapportFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRapportFactory.swift; sourceTree = "<group>"; };
 		37D95C4F27CC2ED60007FF9E /* ListRapportWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRapportWebService.swift; sourceTree = "<group>"; };
+		37D95C5727CC8B9D0007FF9E /* RapportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapportTableViewCell.swift; sourceTree = "<group>"; };
+		37D95C5827CC8B9D0007FF9E /* RapportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RapportTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				37D95C4B27CC2E910007FF9E /* RapportFactory.swift */,
 				37D95C4D27CC2EB50007FF9E /* ListRapportFactory.swift */,
 				37D95C4F27CC2ED60007FF9E /* ListRapportWebService.swift */,
+				37D95C5727CC8B9D0007FF9E /* RapportTableViewCell.swift */,
+				37D95C5827CC8B9D0007FF9E /* RapportTableViewCell.xib */,
 			);
 			path = "projet-swift";
 			sourceTree = "<group>";
@@ -177,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3736427627A5DDBF00FF78AC /* LaunchScreen.storyboard in Resources */,
+				37D95C5A27CC8B9D0007FF9E /* RapportTableViewCell.xib in Resources */,
 				0945518B27CBF94C0062B49B /* newRapportTableViewCell.xib in Resources */,
 				3736428027A5DF8400FF78AC /* AuthViewController.xib in Resources */,
 				3736427327A5DDBF00FF78AC /* Assets.xcassets in Resources */,
@@ -194,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D95C5927CC8B9D0007FF9E /* RapportTableViewCell.swift in Sources */,
 				3736428227A5E15700FF78AC /* User.swift in Sources */,
 				3736427F27A5DF8400FF78AC /* AuthViewController.swift in Sources */,
 				3736428427A5E3D300FF78AC /* Authentication.swift in Sources */,

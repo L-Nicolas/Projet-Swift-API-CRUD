@@ -33,12 +33,14 @@ class ListRapportUserViewController: UIViewController, UITableViewDataSource {
         self.rapportPresentationLabel.textAlignment = NSTextAlignment.left;
         self.rapportPresentationLabel.numberOfLines = 4
         self.rapportTableView.dataSource = self
+        
         if self.token.isEmpty {
             let alert = UIAlertController(title: "Problème", message: "Impossible de récuprer vos rapports", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         } else {
+            
             Task {
                 let result = await ListRapportWebService.getListRapport(token: self.token)
                 dump(result)
@@ -53,6 +55,7 @@ class ListRapportUserViewController: UIViewController, UITableViewDataSource {
                     }
                     dump(resultData[0])
                     self.rapportsTable = resultData
+                    //self.registerTableViewCells()
                 }
             }
         }
