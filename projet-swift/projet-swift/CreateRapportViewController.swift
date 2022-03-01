@@ -70,8 +70,8 @@ class CreateRapportViewController: UIViewController, UITableViewDelegate, UITabl
                     self.present(alert, animated: true, completion: nil)
                 } else {
                     print("good")
-                    //let nextController = HomeViewController.newInstance(result: result)
-                    //self.navigationController?.pushViewController(nextController, animated: true)
+                    let nextController = ListRapportUserViewController.newInstance(token: token)
+                    self.navigationController?.pushViewController(nextController, animated: true)
                 }
             }
         }

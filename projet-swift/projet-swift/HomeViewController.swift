@@ -44,6 +44,11 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(nextController, animated: true)
     }
     
+    @IBAction func displayProfil(_ sender: Any) {
+        let nextController = UserProfilViewController.newInstance(token: self.token)
+        self.navigationController?.pushViewController(nextController, animated: true)
+    }
+    
     @IBAction func newRapport(_ sender: Any) {
         let nextController = CreateRapportViewController.newInstance(token: self.token)
         self.navigationController?.pushViewController(nextController, animated: true)
