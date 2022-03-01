@@ -10,11 +10,25 @@ import UIKit
 class UserProfilViewController: UIViewController {
     
     
-    var token: String = ""
+    @IBOutlet weak var email: UILabel!
     
-    public class func newInstance(token: String) -> UserProfilViewController {
+    @IBOutlet weak var iName: UILabel!
+    
+    @IBOutlet weak var iFirstname: UILabel!
+    
+    @IBOutlet weak var iaddress: UILabel!
+    
+    @IBOutlet weak var iCity: UILabel!
+    
+    @IBOutlet weak var iCP: UILabel!
+    
+    @IBOutlet weak var iPhonenumber: UILabel!
+    
+    var infoProfil: [String : Any] = [:]
+    
+    public class func newInstance(info: [String : Any]) -> UserProfilViewController {
         let pvc = UserProfilViewController()
-        pvc.token = token
+        pvc.infoProfil = info
         return pvc
     }
 
@@ -24,8 +38,15 @@ class UserProfilViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.email.text = infoProfil["email"] as? String
+        self.iName.text = infoProfil["nom"] as? String
+        //self.iaddress.text = infoProfil["adresse"] as? String
+        self.iCity.text = infoProfil["ville"] as? String
+        self.iCP.text = infoProfil["code_postal"] as? String
+        self.iFirstname.text = infoProfil["prenom"] as? String
+        var PN = infoProfil["telephone"] as! NSNumber
+        self.iPhonenumber.text = PN.stringValue
     }
     
 

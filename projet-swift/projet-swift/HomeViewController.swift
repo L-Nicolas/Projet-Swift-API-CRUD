@@ -45,8 +45,21 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func displayProfil(_ sender: Any) {
-        let nextController = UserProfilViewController.newInstance(token: self.token)
-        self.navigationController?.pushViewController(nextController, animated: true)
+        Task {
+            let resProfil = await ProfilData().getDataForProfil(token: token)
+            if resProfil["error"] as! Int == 1 {
+                let alert = UIAlertController(title: "Problème", message: resProfil["data"]?["message"] as? String, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                guard let arr = resProfil["data"] as? [[String:Any]] else {
+                    return
+                }
+                let finalarr = arr.first
+                let nextController = UserProfilViewController.newInstance(info: finalarr!)
+                self.navigationController?.pushViewController(nextController, animated: true)
+        }
+        }
     }
     
     @IBAction func newRapport(_ sender: Any) {

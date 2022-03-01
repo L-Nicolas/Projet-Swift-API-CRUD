@@ -10,12 +10,13 @@ import Foundation
 var hasError = false
 
 final class sendReport{
-    func sendnewReport(myProblem: String, iDescription: String, token: String) async -> [String: AnyObject] {
+    func sendnewReport(myProblem: String, iDescription: String, token: String, title: String) async -> [String: AnyObject] {
     
         var dic:[String:AnyObject] = [:]
 
         var request = URLRequest(url: URL(string: "http://localhost:3000/api/user/rapport/create/")!)
-        var parameters = "token=" + token + "&type_probleme=" + myProblem + "&description=" + iDescription
+        let parameters = "token=" + token + "&type_probleme=" + myProblem + "&description=" + iDescription + "&titre=" + title
+        dump(parameters)
     
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
