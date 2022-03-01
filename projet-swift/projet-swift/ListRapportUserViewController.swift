@@ -55,8 +55,9 @@ class ListRapportUserViewController: UIViewController, UITableViewDataSource {
                     }
                     dump(resultData[0])
                     self.rapportsTable = resultData
-                    //self.registerTableViewCells()
+                    self.registerTableViewCells()
                 }
+                //self.registerTableViewCells();
             }
         }
     }
@@ -66,12 +67,25 @@ class ListRapportUserViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ListRapportUserViewController.albumCellID) ?? UITableViewCell(style: .default, reuseIdentifier: ListRapportUserViewController.albumCellID)
-        let rapport = self.rapportsTable[indexPath.row]
-        print("affichage")
-        dump(rapport
-        )
-        cell.textLabel?.text = "Rapport : \(rapport.id)"
-        return cell
+        guard let cell1 = tableView.dequeueReusableCell(withIdentifier: "RapportTableViewCell", for: indexPath) as? RapportTableViewCell else { return UITableViewCell()
+        }
+        return cell1
+        /*} else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ListRapportUserViewController.albumCellID) ?? UITableViewCell(style: .default, reuseIdentifier: ListRapportUserViewController.albumCellID)
+            let rapport = self.rapportsTable[indexPath.row]
+            print("affichage")
+            dump(rapport
+            )
+            cell.textLabel?.text = "Rapport : \(rapport.id)"
+            return cell
+        }*/
+        //return UITableViewCell()
+    }
+    
+    private func registerTableViewCells() {
+        let textFieldCell = UINib(nibName: "RapportTableViewCell",
+                                  bundle: nil)
+        self.rapportTableView.register(textFieldCell,
+                                forCellReuseIdentifier: "RapportTableViewCell")
     }
 }

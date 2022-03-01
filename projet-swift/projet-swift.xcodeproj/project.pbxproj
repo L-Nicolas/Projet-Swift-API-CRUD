@@ -32,6 +32,8 @@
 		37D95C5027CC2ED60007FF9E /* ListRapportWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C4F27CC2ED60007FF9E /* ListRapportWebService.swift */; };
 		37D95C5927CC8B9D0007FF9E /* RapportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C5727CC8B9D0007FF9E /* RapportTableViewCell.swift */; };
 		37D95C5A27CC8B9D0007FF9E /* RapportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D95C5827CC8B9D0007FF9E /* RapportTableViewCell.xib */; };
+		37D95C6427CE291F0007FF9E /* RapportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D95C6227CE291F0007FF9E /* RapportDetailViewController.swift */; };
+		37D95C6527CE291F0007FF9E /* RapportDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D95C6327CE291F0007FF9E /* RapportDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		37D95C4F27CC2ED60007FF9E /* ListRapportWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRapportWebService.swift; sourceTree = "<group>"; };
 		37D95C5727CC8B9D0007FF9E /* RapportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapportTableViewCell.swift; sourceTree = "<group>"; };
 		37D95C5827CC8B9D0007FF9E /* RapportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RapportTableViewCell.xib; sourceTree = "<group>"; };
+		37D95C6227CE291F0007FF9E /* RapportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapportDetailViewController.swift; sourceTree = "<group>"; };
+		37D95C6327CE291F0007FF9E /* RapportDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RapportDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				37D95C4F27CC2ED60007FF9E /* ListRapportWebService.swift */,
 				37D95C5727CC8B9D0007FF9E /* RapportTableViewCell.swift */,
 				37D95C5827CC8B9D0007FF9E /* RapportTableViewCell.xib */,
+				37D95C6227CE291F0007FF9E /* RapportDetailViewController.swift */,
+				37D95C6327CE291F0007FF9E /* RapportDetailViewController.xib */,
 			);
 			path = "projet-swift";
 			sourceTree = "<group>";
@@ -184,6 +190,7 @@
 			files = (
 				3736427627A5DDBF00FF78AC /* LaunchScreen.storyboard in Resources */,
 				37D95C5A27CC8B9D0007FF9E /* RapportTableViewCell.xib in Resources */,
+				37D95C6527CE291F0007FF9E /* RapportDetailViewController.xib in Resources */,
 				0945518B27CBF94C0062B49B /* newRapportTableViewCell.xib in Resources */,
 				3736428027A5DF8400FF78AC /* AuthViewController.xib in Resources */,
 				3736427327A5DDBF00FF78AC /* Assets.xcassets in Resources */,
@@ -213,6 +220,7 @@
 				37D95C4A27CC2E650007FF9E /* ListRapport.swift in Sources */,
 				37D95C5027CC2ED60007FF9E /* ListRapportWebService.swift in Sources */,
 				37D95C4E27CC2EB50007FF9E /* ListRapportFactory.swift in Sources */,
+				37D95C6427CE291F0007FF9E /* RapportDetailViewController.swift in Sources */,
 				37D95C4C27CC2E910007FF9E /* RapportFactory.swift in Sources */,
 				370E451E27B9573C001F9538 /* StartViewController.swift in Sources */,
 				0945518627CBF2740062B49B /* CreateRapportViewController.swift in Sources */,
