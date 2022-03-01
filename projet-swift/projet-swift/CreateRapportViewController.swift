@@ -10,6 +10,7 @@ import UIKit
 class CreateRapportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var rapportPresentationLabel: UILabel!
+    @IBOutlet weak var myTitle: UITextField!
     @IBOutlet weak var myTable: UITableView!
     @IBOutlet weak var myDescription: UITextField!
     var token: String = ""
@@ -55,6 +56,9 @@ class CreateRapportViewController: UIViewController, UITableViewDelegate, UITabl
         guard let iDescription = self.myDescription.text else {
                   return
               }
+        guard let iTitle = self.myTitle.text else {
+            return
+        }
         if iDescription.isEmpty {
             let alert = UIAlertController(title: "Problème", message: "Veuillez remplir les champs", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
@@ -62,16 +66,15 @@ class CreateRapportViewController: UIViewController, UITableViewDelegate, UITabl
             return
         } else {
             Task {
-                let resReport = await sendReport().sendnewReport(myProblem: self.select, iDescription: iDescription, token: token)
+                let resReport = await sendReport().sendnewReport(myProblem: self.select, iDescription: iDescription, token: token, title: iTitle)
                 
                 if resReport["data"]?["error"] as! Int == 1 {
                     let alert = UIAlertController(title: "Problème", message: resReport["data"]?["message"] as? String, preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 } else {
-                    print("good")
-                    //let nextController = HomeViewController.newInstance(result: result)
-                    //self.navigationController?.pushViewController(nextController, animated: true)
+                    let nextController = ListRapportUserViewController.newInstance(token: token)
+                    self.navigationController?.pushViewController(nextController, animated: true)
                 }
             }
         }
