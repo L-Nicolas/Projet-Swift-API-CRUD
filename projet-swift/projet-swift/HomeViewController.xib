@@ -14,61 +14,84 @@
                 <outlet property="homePresentationLabel" destination="4i0-l1-hxz" id="TDA-wj-7YP"/>
                 <outlet property="newRapport" destination="Avr-Bl-lW8" id="9VL-fC-xrd"/>
                 <outlet property="rapportTableView" destination="3o0-D3-ItP" id="QWK-sa-E71"/>
-                <outlet property="scrollView" destination="gb8-Rw-5Tz" id="pMv-eR-DRM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gb8-Rw-5Tz">
-                    <rect key="frame" x="20" y="58" width="374" height="1406"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kee-8y-TtM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="1556"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxt-eC-2Bb">
-                            <rect key="frame" x="24" y="250.70066518846895" width="326" height="59.946784922395324"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="MES RAPPORTS" cornerStyle="large"/>
-                            <connections>
-                                <action selector="listRapportUser:" destination="-1" eventType="touchUpInside" id="Ecj-Az-QmR"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BIENVENUE DANS VOTRE ESPACE LOCATAIRE" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i0-l1-hxz">
-                            <rect key="frame" x="24" y="-0.74279379157810432" width="326" height="129.88470066518985"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LES RAPPORTS DE VOTRE IMMEUBLE" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtD-Im-bFN">
-                            <rect key="frame" x="24" y="413.88913525498953" width="326" height="129.88470066518988"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="20" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3o0-D3-ItP">
-                            <rect key="frame" x="24" y="528.78713968958061" width="326" height="734.34811529934257"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        </tableView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avr-Bl-lW8">
-                            <rect key="frame" x="24" y="137.46784922394446" width="326" height="59.946784922395324"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="NOUVEAU RAPPORT" cornerStyle="large"/>
-                            <connections>
-                                <action selector="newRapport:" destination="-1" eventType="touchUpInside" id="Ddc-LO-BTN"/>
-                            </connections>
-                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjV-Px-NHw">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BIENVENUE DANS VOTRE ESPACE LOCATAIRE" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i0-l1-hxz">
+                                    <rect key="frame" x="44" y="41" width="326" height="129.88470066518985"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avr-Bl-lW8">
+                                    <rect key="frame" x="44" y="217" width="326" height="59.946784922395324"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="NOUVEAU RAPPORT" cornerStyle="large"/>
+                                    <connections>
+                                        <action selector="newRapport:" destination="-1" eventType="touchUpInside" id="Ddc-LO-BTN"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxt-eC-2Bb">
+                                    <rect key="frame" x="44" y="346" width="326" height="59.946784922395324"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="MES RAPPORTS" cornerStyle="large"/>
+                                    <connections>
+                                        <action selector="listRapportUser:" destination="-1" eventType="touchUpInside" id="Ecj-Az-QmR"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="20" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3o0-D3-ItP">
+                                    <rect key="frame" x="44" y="822" width="326" height="719"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LES RAPPORTS DE VOTRE IMMEUBLE" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jtD-Im-bFN">
+                                    <rect key="frame" x="44" y="684" width="326" height="129.88470066518988"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94117647059999998" green="0.96078431369999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1600" id="cj2-yW-dhh"/>
+                            </constraints>
+                        </view>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="WjV-Px-NHw" firstAttribute="leading" secondItem="kee-8y-TtM" secondAttribute="leading" id="3sQ-WN-lL5"/>
+                        <constraint firstAttribute="bottom" secondItem="WjV-Px-NHw" secondAttribute="bottom" id="BU8-Yp-usN"/>
+                        <constraint firstAttribute="trailing" secondItem="WjV-Px-NHw" secondAttribute="trailing" id="SPr-lC-iUV"/>
+                        <constraint firstItem="WjV-Px-NHw" firstAttribute="top" secondItem="kee-8y-TtM" secondAttribute="top" id="lXZ-nh-Lpn"/>
+                    </constraints>
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.92941176469999998" green="0.94901960780000005" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="kee-8y-TtM" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1K5-v5-fse"/>
+                <constraint firstItem="kee-8y-TtM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6DH-5g-IP8"/>
+                <constraint firstAttribute="bottom" secondItem="kee-8y-TtM" secondAttribute="bottom" id="9hD-uE-p5h"/>
+                <constraint firstItem="kee-8y-TtM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rpq-Tq-ydI"/>
+                <constraint firstItem="WjV-Px-NHw" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="uw0-fs-4aA"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="131.8840579710145" y="67.633928571428569"/>
         </view>
     </objects>

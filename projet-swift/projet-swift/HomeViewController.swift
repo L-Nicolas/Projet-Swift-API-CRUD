@@ -10,7 +10,6 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
     @IBOutlet weak var homePresentationLabel: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var btnMesRapports: UIButton!
     @IBOutlet weak var newRapport: UIButton!
@@ -35,9 +34,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            scrollView.delegate = self
         rapportTableView.delegate = self
-            scrollView.bounces = false
         rapportTableView.bounces = false
         rapportTableView.isScrollEnabled = false
         self.rapportTableView.dataSource = self
@@ -107,21 +104,4 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let yOffset = scrollView.contentOffset.y
-
-        if scrollView == self.scrollView {
-            if yOffset >= scrollViewContentHeight - screenHeight {
-                scrollView.isScrollEnabled = false
-                rapportTableView.isScrollEnabled = true
-            }
-        }
-
-        if scrollView == self.rapportTableView {
-            if yOffset <= 0 {
-                self.scrollView.isScrollEnabled = true
-                self.rapportTableView.isScrollEnabled = false
-            }
-        }
-    }
 }
