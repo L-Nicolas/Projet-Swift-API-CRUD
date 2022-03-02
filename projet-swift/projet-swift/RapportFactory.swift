@@ -13,12 +13,11 @@ class RapportFactory {
         guard let id = dict["id"] as? Int,
               let type_probleme = dict["type_probleme"] as? String,
               let description = dict["description"] as? String,
-              let date = dict["date_envoie"] as? String,
               let etat = dict["etat"] as? String else {
                   return nil
               }
               
-        return Rapport(id: "\(id)", type_probleme: type_probleme, description: description, etat: etat, date: date)
+            return Rapport(id: "\(id)", type_probleme: type_probleme, description: description, etat: etat)
     }
     
     class func rapports(from array: [[String: AnyObject]]) -> [Rapport] {

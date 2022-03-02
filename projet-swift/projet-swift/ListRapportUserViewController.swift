@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ListRapportUserViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ListRapportUserViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var rapportPresentationLabel: UILabel!
     @IBOutlet weak var rapportTableView: UITableView!
     
-    static let rapportCellID = "RapportTableViewCell"
+    static let albumCellID = "_ALBUM_CELL_ID"
     var token: String = ""
     var rapportsTable: [Rapport] = [] {
         didSet {
@@ -32,10 +32,6 @@ class ListRapportUserViewController: UIViewController, UITableViewDataSource, UI
         self.rapportPresentationLabel.font = UIFont.boldSystemFont(ofSize: 30)
         self.rapportPresentationLabel.textAlignment = NSTextAlignment.left;
         self.rapportPresentationLabel.numberOfLines = 4
-        
-        let nib = UINib(nibName: "RapportTableViewCell",bundle: nil)
-        self.rapportTableView.register(nib,forCellReuseIdentifier: "RapportTableViewCell")
-        self.rapportTableView.delegate = self
         self.rapportTableView.dataSource = self
         
         if self.token.isEmpty {
@@ -59,6 +55,7 @@ class ListRapportUserViewController: UIViewController, UITableViewDataSource, UI
                     }
                     dump(resultData[0])
                     self.rapportsTable = resultData
+                    //self.registerTableViewCells()
                 }
             }
         }
@@ -69,22 +66,12 @@ class ListRapportUserViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RapportTableViewCell", for: indexPath) as! RapportTableViewCell
-        cell.titreRapportLabel.text = "ggggefeeerererererererer"
-        cell.idRapport.text = rapportsTable[indexPath.row].id
-        cell.idRapport.isHidden = true
-        cell.dateRapport.text = rapportsTable[indexPath.row].date
-        cell.token.text = token
-        cell.token.isHidden = true
-        
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
-        cell.clipsToBounds = true
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListRapportUserViewController.albumCellID) ?? UITableViewCell(style: .default, reuseIdentifier: ListRapportUserViewController.albumCellID)
+        let rapport = self.rapportsTable[indexPath.row]
+        print("affichage")
+        dump(rapport
+        )
+        cell.textLabel?.text = "Rapport : \(rapport.id)"
         return cell
-    }
-    
-    private func registerTableViewCells() {
-        let nib = UINib(nibName: ListRapportUserViewController.rapportCellID,bundle: nil)
-        self.rapportTableView.register(nib,forCellReuseIdentifier: ListRapportUserViewController.rapportCellID)
     }
 }

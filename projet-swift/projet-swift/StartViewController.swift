@@ -12,11 +12,6 @@ class StartViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var startLabel: UILabel!
     
-    public class func newInstance() -> StartViewController {
-        let svc = StartViewController()
-        return svc
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -25,7 +20,7 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true);
-        self.startLabel.text = "SUPER GARDIEN"
+        self.startLabel.text = "J'AI PAS DIDÉE ENFAITE"
         self.startLabel.font = UIFont.boldSystemFont(ofSize: 30)
         self.startLabel.textAlignment = NSTextAlignment.center;
         self.startLabel.numberOfLines = 4
