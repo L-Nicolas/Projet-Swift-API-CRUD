@@ -44,6 +44,24 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(nextController, animated: true)
     }
     
+    @IBAction func displayProfil(_ sender: Any) {
+        Task {
+            let resProfil = await ProfilData().getDataForProfil(token: token)
+            if resProfil["error"] as! Int == 1 {
+                let alert = UIAlertController(title: "Problème", message: resProfil["data"]?["message"] as? String, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                guard let arr = resProfil["data"] as? [[String:Any]] else {
+                    return
+                }
+                let finalarr = arr.first
+                let nextController = UserProfilViewController.newInstance(info: finalarr!)
+                self.navigationController?.pushViewController(nextController, animated: true)
+        }
+        }
+    }
+    
     @IBAction func newRapport(_ sender: Any) {
         let nextController = CreateRapportViewController.newInstance(token: self.token)
         self.navigationController?.pushViewController(nextController, animated: true)

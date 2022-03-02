@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093F3C3F27CE32A9007A50B1 /* UserProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F3C3D27CE32A9007A50B1 /* UserProfilViewController.swift */; };
+		093F3C4027CE32A9007A50B1 /* UserProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093F3C3E27CE32A9007A50B1 /* UserProfilViewController.xib */; };
 		0945518627CBF2740062B49B /* CreateRapportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945518427CBF2740062B49B /* CreateRapportViewController.swift */; };
 		0945518727CBF2740062B49B /* CreateRapportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0945518527CBF2740062B49B /* CreateRapportViewController.xib */; };
 		0945518A27CBF94C0062B49B /* newRapportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945518827CBF94C0062B49B /* newRapportTableViewCell.swift */; };
 		0945518B27CBF94C0062B49B /* newRapportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0945518927CBF94C0062B49B /* newRapportTableViewCell.xib */; };
 		0945518D27CC0AE00062B49B /* sendRapport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945518C27CC0AE00062B49B /* sendRapport.swift */; };
+<<<<<<< HEAD
 		3704181F27CEE46600D0AACB /* RapportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704181D27CEE46600D0AACB /* RapportTableViewCell.swift */; };
 		3704182027CEE46600D0AACB /* RapportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3704181E27CEE46600D0AACB /* RapportTableViewCell.xib */; };
+=======
+		09F514A627CE54E1009F60E9 /* getDataForProfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F514A527CE54E1009F60E9 /* getDataForProfil.swift */; };
+>>>>>>> 12ab22fce4a11494c0cfc4703e1e06665625c3a4
 		370E451A27B93A95001F9538 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E451827B93A95001F9538 /* HomeViewController.swift */; };
 		370E451B27B93A95001F9538 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370E451927B93A95001F9538 /* HomeViewController.xib */; };
 		370E451E27B9573C001F9538 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E451C27B9573C001F9538 /* StartViewController.swift */; };
@@ -37,13 +43,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		093F3C3D27CE32A9007A50B1 /* UserProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilViewController.swift; sourceTree = "<group>"; };
+		093F3C3E27CE32A9007A50B1 /* UserProfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfilViewController.xib; sourceTree = "<group>"; };
 		0945518427CBF2740062B49B /* CreateRapportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRapportViewController.swift; sourceTree = "<group>"; };
 		0945518527CBF2740062B49B /* CreateRapportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateRapportViewController.xib; sourceTree = "<group>"; };
 		0945518827CBF94C0062B49B /* newRapportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newRapportTableViewCell.swift; sourceTree = "<group>"; };
 		0945518927CBF94C0062B49B /* newRapportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newRapportTableViewCell.xib; sourceTree = "<group>"; };
 		0945518C27CC0AE00062B49B /* sendRapport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendRapport.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		3704181D27CEE46600D0AACB /* RapportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapportTableViewCell.swift; sourceTree = "<group>"; };
 		3704181E27CEE46600D0AACB /* RapportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RapportTableViewCell.xib; sourceTree = "<group>"; };
+=======
+		09F514A527CE54E1009F60E9 /* getDataForProfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDataForProfil.swift; sourceTree = "<group>"; };
+>>>>>>> 12ab22fce4a11494c0cfc4703e1e06665625c3a4
 		370E451827B93A95001F9538 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		370E451927B93A95001F9538 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		370E451C27B9573C001F9538 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -122,10 +134,18 @@
 				37D95C4B27CC2E910007FF9E /* RapportFactory.swift */,
 				37D95C4D27CC2EB50007FF9E /* ListRapportFactory.swift */,
 				37D95C4F27CC2ED60007FF9E /* ListRapportWebService.swift */,
+<<<<<<< HEAD
 				37D95C6227CE291F0007FF9E /* RapportDetailViewController.swift */,
 				37D95C6327CE291F0007FF9E /* RapportDetailViewController.xib */,
 				3704181D27CEE46600D0AACB /* RapportTableViewCell.swift */,
 				3704181E27CEE46600D0AACB /* RapportTableViewCell.xib */,
+=======
+				37D95C5727CC8B9D0007FF9E /* RapportTableViewCell.swift */,
+				37D95C5827CC8B9D0007FF9E /* RapportTableViewCell.xib */,
+				093F3C3D27CE32A9007A50B1 /* UserProfilViewController.swift */,
+				093F3C3E27CE32A9007A50B1 /* UserProfilViewController.xib */,
+				09F514A527CE54E1009F60E9 /* getDataForProfil.swift */,
+>>>>>>> 12ab22fce4a11494c0cfc4703e1e06665625c3a4
 			);
 			path = "projet-swift";
 			sourceTree = "<group>";
@@ -189,7 +209,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3736427627A5DDBF00FF78AC /* LaunchScreen.storyboard in Resources */,
+<<<<<<< HEAD
 				37D95C6527CE291F0007FF9E /* RapportDetailViewController.xib in Resources */,
+=======
+				093F3C4027CE32A9007A50B1 /* UserProfilViewController.xib in Resources */,
+				37D95C5A27CC8B9D0007FF9E /* RapportTableViewCell.xib in Resources */,
+>>>>>>> 12ab22fce4a11494c0cfc4703e1e06665625c3a4
 				0945518B27CBF94C0062B49B /* newRapportTableViewCell.xib in Resources */,
 				3736428027A5DF8400FF78AC /* AuthViewController.xib in Resources */,
 				3736427327A5DDBF00FF78AC /* Assets.xcassets in Resources */,
@@ -218,6 +243,8 @@
 				0945518A27CBF94C0062B49B /* newRapportTableViewCell.swift in Sources */,
 				0945518D27CC0AE00062B49B /* sendRapport.swift in Sources */,
 				37D95C4A27CC2E650007FF9E /* ListRapport.swift in Sources */,
+				09F514A627CE54E1009F60E9 /* getDataForProfil.swift in Sources */,
+				093F3C3F27CE32A9007A50B1 /* UserProfilViewController.swift in Sources */,
 				37D95C5027CC2ED60007FF9E /* ListRapportWebService.swift in Sources */,
 				37D95C4E27CC2EB50007FF9E /* ListRapportFactory.swift in Sources */,
 				37D95C6427CE291F0007FF9E /* RapportDetailViewController.swift in Sources */,
