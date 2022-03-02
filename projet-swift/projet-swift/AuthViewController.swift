@@ -57,7 +57,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
                 let result = await Auth().loginUser(email: log, password: pwd)
                 
                 if result["error"] as! Int == 1 {
-                    let alert = UIAlertController(title: "Problème", message: result["data"]?["message"] as? String, preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: "Problème", message: result["message"] as? String, preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "Recommencer", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 } else {
@@ -71,5 +71,4 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
 }

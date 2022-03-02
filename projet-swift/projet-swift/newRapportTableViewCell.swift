@@ -9,6 +9,7 @@ import UIKit
 
 class newRapportTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var btnType: UIButton!
     @IBOutlet weak var myLabel: UILabel!
     
     override func awakeFromNib() {
